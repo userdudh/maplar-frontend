@@ -1,0 +1,47 @@
+.menu-lateral li{
+    list-style: none;
+    padding-bottom: 3vh;
+    color: rgb(57, 57, 57);
+}
+
+.navegacao-lateral{
+    width: 10vw;
+    border-right: 2px solid rgb(179, 179, 179);
+    margin-top: 3vh;
+    
+}
+
+.navegacao-lateral a {
+    text-decoration: none;   
+    color: #424242;                
+}
+
+.container-geral{
+    display: flex;
+    flex-direction: row;
+}
+.anuncios{
+    display: flex;
+    flex-direction: column;
+}
+.lista-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;            
+    padding: 20px;
+}
+
+.card-imovel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 82vw;
+}
+
+h1{
+    margin-left: 2%;
+}

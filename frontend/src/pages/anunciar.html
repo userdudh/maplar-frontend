@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/pages/anunciar.css">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="navbar">
+    <div class="logo"><a href="../../index.html"><img src="../assets/images/logo/Maplar.svg" alt="Maplar logo"></a></div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Explorar</a></li>
+            <li><a href="#">Mapa</a></li>
+            <li><a href="../pages/anunciar.html">Anunciar</a></li>
+            <li><a href="../pages/meus-anuncios.html">Meus Anúncios</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="container-pag">
+        <form id="formImovel" name="formImovel" onsubmit="capturarDados(event)">
+            <h1 class="titulo-pagina">Anunciar meu imóvel</h1>
+            <h2 class="rotulo">Inserir imagem</h2>
+            <div class="container-imagem">
+                <div class="inserir-imagem">
+                    <input type="file" id="imagem" name="imagem" accept="image/*" />
+                </div>
+            </div>
+        
+            <div>
+                <h2 class="topicos-pagina">Tipo de anúncio</h2>
+                <div class="container-tipo-anuncio">
+                    <div class="tipo-anuncio">
+                        <input type="radio" id="aluguel" name="tipo" value="aluguel" />
+                        <label for="aluguel">Aluguel</label>
+                        <p>Anuncie para alugar rápido e com segurança</p>
+                    </div>
+                    <div class="tipo-anuncio">
+                        <input type="radio" id="venda" name="tipo" value="venda"/>
+                        <label for="venda">Venda</label>
+                        <p for>Venda seu imóvel pelo melhor preço de mercado</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="topicos-pagina">Detalhes do imovel</h2>
+            <div class="superior-detalhes">
+                <div class="detalhe">
+                    <label for="titulo" class="rotulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" >
+                </div>
+                <div class="detalhe">
+                    <label for="valor" class="rotulo">Valor</label>
+                    <input type="number" name="preco" id="valor">
+                </div>
+            </div>
+            <div class="inferior-detalhes">
+                <div class="detalhe">
+                    <label for="descricao" class="rotulo">Descrição</label>
+                    <textarea name="descricao" id="descricao"></textarea>
+                </div>
+                <div class="direita-detalhes">
+                    <div class="detalhe">
+                        <label for="quarto" class="rotulo">Quartos</label>
+                        <input type="number" name="quarto" id="quarto">
+                    </div>
+                    <div class="detalhe">
+                        <label for="banheiro" class="rotulo">Banheiros</label>
+                        <input type="number" name="banheiro" id="banheiro">
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Publicar anúncio</button>
+        </form>
+    </div>
+<script src="../scripts/models/Imovel.js"></script>
+<script src="../scripts/repositories/imovelRepository.js"></script>
+<script src="../scripts/services/imovelService.js"></script>
+<script src="../scripts/controllers/imovelController.js"></script>
+
+</body>
+</html>
