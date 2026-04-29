@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Imóveis</title>
+    <!-- <base href="/site-imoveis/">-->
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="src\assets\images\logo\Maplar.svg" alt="Maplar logo">
+        </a>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Explorar</a></li>
+            <li><a href="#">Mapa</a></li>
+            <li><a href="src/pages/anunciar.html">Anunciar</a></li>
+            <li><a href="src/pages/meus-anuncios.html">Meus Anúncios</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- <section class="banner"> 
+    <h1>Encontre ou anuncie seu imóvel</h1>
+    <p>Alugue mais rápido ou encontre sua casa ideal</p>
+
+    <div class="botoes">
+        <a href="#imoveis" class="cta">Ver imóveis</a>
+        <a href="src/pages/anunciar.html" class="cta-secundario">Anunciar meu imóvel</a>
+    </div>
+</section> -->
+
+<section class="hero">
+    <div class="carousel">
+
+        <div class="slide active">
+            <h1>Bem-vindo ao Maplar</h1>
+            <h2>Encontre seu imóvel ideal</h2>
+            <p>Casas, apartamentos e oportunidades perto de você</p>
+            
+            
+            <div class="hero-buttons">
+                <a href="#imoveis" class="cta">Ver imóveis</a>
+                <a href="src/pages/anunciar.html" class="cta-secundario">Anunciar</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h1>Anuncie em minutos</h1>
+            <p>Seu imóvel visto por milhares de pessoas</p>
+        </div>
+
+        <div class="slide">
+            <h1>Direto com o proprietário</h1>
+            <p>Sem taxas escondidas, sem complicação</p>
+        </div>
+
+    </div>
+
+    <div class="indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section class="prova-social">
+    <p>+150 imóveis cadastrados • +80 clientes satisfeitos</p>
+</section>
+
+<section class="beneficios">
+    <div class="beneficio">
+        <h3>Fácil de usar</h3>
+        <p>Encontre imóveis rapidamente sem burocracia</p>
+    </div>
+
+    <div class="beneficio">
+        <h3>Rápido</h3>
+        <p>Contato direto e ágil com quem anuncia</p>
+    </div>
+
+    <div class="beneficio">
+        <h3>Sem taxas escondidas</h3>
+        <p>Transparência total nos anúncios</p>
+    </div>
+</section>
+
+<section class="cta-final">
+    <h2>Tem um imóvel parado?</h2>
+    <p>Anuncie agora e encontre interessados rapidamente</p>
+
+    <a href="src/pages/anunciar.html" class="btn-cta-final">
+        Anunciar meu imóvel
+    </a>
+</section>
+
+<section class="captura">
+    <h2>Quer receber notícias de imóveis no WhatsApp?</h2>
+
+    <input type="text" placeholder="Seu nome">
+    <input type="text" placeholder="Seu WhatsApp">
+    <button>Quero receber imóveis no WhatsAp</button>
+</section>
+
+<div class="busca">
+    <input type="text" placeholder="Digite bairro, cidade ou preço...">
+    <button>Buscar</button>
+</div>
+
+<div class="container" id="imoveis">
+
+    <div class="card">
+        <h3>Casa no Maurício de Nassau</h3>
+        <p>3 quartos | 2 banheiros</p>
+        <p class="preco">R$ 1.200 / mês</p>
+        <a href="#" class="btn">Quero alugar</a>
+        <a href="#" class="btn-outline">Ver detalhes</a>
+    </div>
+
+    <div class="card">
+        <h3>Casa no Centro</h3>
+        <p>2 quartos | 1 banheiro</p>
+        <p class="preco">R$ 900 / mês</p>
+        <a href="#" class="btn">Quero alugar</a>
+        <a href="#" class="btn-outline">Ver detalhes</a>
+    </div>
+
+</div>
+
+
+<h2 class="titulo-mapa">Encontre no mapa</h2>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="src/script.js"></script>
+
+<section class="depoimentos">
+    <h2>O que estão dizendo sobre nós?</h2>
+
+    <div class="depoimento">
+        <p>"Consegui alugar minha casa em 2 dias!"</p>
+        <span>- Maria</span>
+    </div>
+
+    <div class="depoimento">
+        <p>"Muito mais fácil que imobiliária"</p>
+        <span>- João</span>
+    </div>
+</section>
+
+
+</body>
+</html>

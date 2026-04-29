@@ -1,9 +1,11 @@
 const container = document.getElementById("containerAnuncios");
 
-function carregarAnuncios() {
-    container.innerHTML = ""; 
+
+async function carregarAnuncios() {
+    container.innerHTML = "";
     
-    const listaExibicao = imovelService.buscarParaListagem(); 
+    
+    const listaExibicao = await imovelService.buscarParaListagem(); 
 
     if (listaExibicao.length === 0) {
         container.innerHTML = "<p>Nenhum anúncio encontrado.</p>";
@@ -13,7 +15,6 @@ function carregarAnuncios() {
     listaExibicao.forEach((imovel) => {
         const card = document.createElement("div");
         card.className = "card-imovel";
-        
         card.innerHTML = `
             <div class="info-imovel">
                 <p><strong>${imovel.titulo}</strong> | ${imovel.tipo || 'Não definido'} | R$ ${imovel.preco},00 </p>
@@ -25,14 +26,15 @@ function carregarAnuncios() {
         `;
         container.appendChild(card);
     });
-}
+} 
 
-function deletarAnuncio(id) {
+
+async function deletarAnuncio(id) {
     const confirmar = confirm("Tem a certeza que deseja excluir este anúncio?");
     if (confirmar) {
-        imovelService.excluir(id);
+        await imovelService.excluir(id); 
         carregarAnuncios();
     }
-}
+} 
 
 document.addEventListener("DOMContentLoaded", carregarAnuncios);

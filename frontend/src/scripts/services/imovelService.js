@@ -1,15 +1,23 @@
+const API = "http://127.0.0.1:5000/imoveis";
+
 const imovelService = {
-    buscarPorId(id) {
-        return imovelRepository.buscarPorId(id);
+    async buscarPorId(id) {
+        const res = await fetch(`${API}/${id}`);
+        return await res.json();
     },
-    buscarParaListagem() {
-        const imoveis = imovelRepository.buscarTodos();
+    async buscarParaListagem() {
+        const res = await fetch(API);
+        const imoveis = await res.json();
         return imoveis.reverse();
     },
-    excluir(id) {
-        imovelRepository.removerPorId(id);
+
+    async excluir(id) {
+        await fetch(`${API}/${id}`, {
+            method: "DELETE"
+        });
     },
-    salvar(imovel) {
+
+    async salvar(imovel) {
         if (!imovel.titulo || imovel.titulo.trim() === "") {
             alert("O título é obrigatório.");
             return false;
@@ -23,11 +31,24 @@ const imovelService = {
             alert("Selecione se o anúncio é para Aluguel ou Venda.");
             return false;
         }
-        if (imovel.id && this.buscarPorId(imovel.id)) {
-            imovelRepository.atualizar(imovel);
+        if (imovel.id) {
+            await fetch(`${API}/${imovel.id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(imovel)
+            });
         } else {
-            imovelRepository.adicionar(imovel);
+            await fetch(API, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(imovel)
+            });
         }
+
 
         return true;
     }
