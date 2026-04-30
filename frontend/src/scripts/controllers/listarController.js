@@ -1,6 +1,5 @@
 const container = document.getElementById("containerAnuncios");
 
-
 async function carregarAnuncios() {
     container.innerHTML = "";
     

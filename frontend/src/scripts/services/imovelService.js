@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:5000/imoveis";
+const API = "http://127.0.0.1:5000/api/imoveis";
 
 const imovelService = {
     async buscarPorId(id) {
@@ -40,6 +40,8 @@ const imovelService = {
                 body: JSON.stringify(imovel)
             });
         } else {
+            imovel.id = crypto.randomUUID(); 
+            
             await fetch(API, {
                 method: "POST",
                 headers: {
@@ -48,7 +50,6 @@ const imovelService = {
                 body: JSON.stringify(imovel)
             });
         }
-
 
         return true;
     }

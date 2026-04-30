@@ -1,6 +1,6 @@
 class Imovel {
     constructor(id, titulo, preco, tipo, imagem, quarto, banheiro, descricao) {
-        this.id = id ? id : crypto.randomUUID();
+        this.id = id;
         this.titulo = titulo;
         this.preco = Number(preco);
         this.tipo = tipo;
