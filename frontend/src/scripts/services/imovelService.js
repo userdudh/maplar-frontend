@@ -39,9 +39,7 @@ const imovelService = {
                 },
                 body: JSON.stringify(imovel)
             });
-        } else {
-            imovel.id = crypto.randomUUID(); 
-            
+        } else {            
             await fetch(API, {
                 method: "POST",
                 headers: {
