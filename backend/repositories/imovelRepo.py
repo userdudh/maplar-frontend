@@ -1,7 +1,6 @@
 import logging
 from bd import session as db_session, Imovel
 
-# Função auxiliar para evitar repetição de código (DRY)
 def _serializar_imovel(imovel):
     return {
         "id": imovel.id,
@@ -23,7 +22,6 @@ def listar_imovel():
         return {"erro": "Falha interna no servidor"}, 500
 
 def buscar_por_id_imovel(id):
-    # Uso atualizado do SQLAlchemy em vez de .query().get()
     imovel = db_session.get(Imovel, id)
     
     if imovel:
