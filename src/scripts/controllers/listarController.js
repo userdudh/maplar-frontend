@@ -16,7 +16,7 @@ async function carregarAnuncios() {
         card.className = "card-imovel";
         card.innerHTML = `
             <div class="info-imovel">
-                <p><strong>${imovel.titulo}</strong> | ${imovel.tipo || 'Não definido'} | R$ ${imovel.preco},00 </p>
+                <p><strong>${imovel.titulo}</strong> | ${imovel.tipo || 'Não definido'} | R$ ${imovel.valor},00 </p>
             </div>
             <div class="acoes">
                 <button onclick="window.location.href='../pages/anunciar.html?edit=${imovel.id}'">Editar</button>

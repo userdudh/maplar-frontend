@@ -9,7 +9,7 @@ async function carregarEdicao() {
             document.querySelector('button[type="submit"]').textContent = "Salvar Alterações";
             
             document.getElementById('titulo').value = imovel.titulo;
-            document.getElementById('preco').value = imovel.preco;
+            document.getElementById('valor').value = imovel.valor;
             document.getElementById('descricao').value = imovel.descricao;
             document.getElementById('quarto').value = imovel.quarto;
             document.getElementById('banheiro').value = imovel.banheiro;
