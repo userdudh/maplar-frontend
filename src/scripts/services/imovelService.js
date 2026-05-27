@@ -18,7 +18,7 @@ const imovelService = {
             alert("O título é obrigatório.");
             return false;
         }
-        if (isNaN(imovel.valor) || imovel.valor <= 0) { // Alterado para 'valor'
+        if (isNaN(imovel.valor) || imovel.valor <= 0) {
             alert("O valor deve ser superior a zero.");
             return false;
         }

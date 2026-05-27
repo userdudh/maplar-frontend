@@ -30,7 +30,7 @@ async function capturarDados(event) {
     const novoImovel = new Imovel(
         idParaEditar || null,
         dados.titulo,
-        dados.preco,
+        dados.valor,
         dados.tipo,
         dados.imagem,
         dados.quarto,
